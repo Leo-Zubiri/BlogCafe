@@ -4,6 +4,7 @@
     --primario: #784D3C;
     --blanco: #fff;
     --negro: #000;
+    --gris: #e1e1e1;
 }
 
 /* apply a natural box layout model to all elements, but allowing components to change */
@@ -72,6 +73,10 @@ img{
     text-align: center;
 }
 
+.short-height{
+    line-height: 1.2;
+}
+
 /* Header */
 
 .header{
@@ -123,4 +128,77 @@ img{
     text-align: center;
     font-size: 1.8rem;
     color: var(--blanco);
+}
+
+@media (min-width: 768px){
+    .contenido-principal{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        column-gap: 4rem;
+    }
+}
+
+.entrada{
+    border-bottom: 2px solid var(--gris);
+    margin-bottom: 2rem;
+}
+
+.entrada:last-of-type{
+    border-bottom: none;
+    margin-bottom: none;
+}
+
+.button{
+    display: block;
+    font-family: var(--fuenteHeading);
+    color: var(--blanco);
+    text-align: center;
+    padding: 1rem 5rem;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 4rem;
+}
+
+@media(min-width: 768px){
+    .button{
+        display: inline-block;
+    }
+}
+
+.button--primary{
+    background-color: var(--negro);
+}
+
+.button--secundary{
+    background-color: var(--primario);
+    display: block;
+}
+
+.cursos{
+    list-style: none;
+}
+
+.widget-curso{
+    border-bottom: 2px solid var(--gris);
+    margin-bottom: 3rem;
+}
+
+.widget-curso:last-of-type{
+    border: none;
+    margin-bottom: 0;
+}
+
+.widget-curso__label{
+    font-family: var(--fuenteHeading);
+    font-weight: bold;  
+}
+
+.widget-curso__info{
+    font-weight: normal;
+}
+
+.widget-curso__label,
+.widget-curso__info{
+    font-size: 2rem;
 }
